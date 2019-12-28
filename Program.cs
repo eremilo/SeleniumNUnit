@@ -33,13 +33,13 @@ namespace ConsoleApp1
             CareersPage careersPage = new CareersPage(driver);
             careersPage.choseCountry("Romania");
             careersPage.choseLanguage("English");
-            Assert.AreEqual(26, careersPage.getVacancies().Count);
+            Assert.AreEqual(26, careersPage.getVacancies().Count); //на самом деле вакансий действительно 32,  на сайте написано 26 
         }
 
         [TearDown]
         public void CleanUP()
         {
-            //driver.Close();
+            driver.Close();
         }
     }
 }

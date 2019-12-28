@@ -12,12 +12,10 @@ namespace ConsoleApp1
     {
         private IWebDriver driver;
 
-
         public CareersPage(IWebDriver driver)
         {
             this.driver = driver;
         }
-
         internal void choseCountry(String country)
         {
             driver.FindElement(By.Id("country-element")).Click();
@@ -29,9 +27,7 @@ namespace ConsoleApp1
                     element.Click();
                     break;
                 }
-
             }
-            //driver.FindElement(By.CssSelector("[data-value='"+country+"']")).Click();
         }
 
         internal ReadOnlyCollection<IWebElement> getVacancies()
