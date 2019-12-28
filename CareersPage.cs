@@ -32,6 +32,7 @@ namespace ConsoleApp1
 
         internal ReadOnlyCollection<IWebElement> getVacancies()
         {
+            Thread.Sleep(1000);
             driver.FindElement(By.CssSelector(".load-more-button")).Click();
             WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(5));
             wait.Until(ExpectedConditions.ElementExists(By.CssSelector(".hide.load-more-button.content-loader-button")));
