@@ -33,7 +33,7 @@ namespace ConsoleApp1
             CareersPage careersPage = new CareersPage(driver);
             careersPage.choseCountry("Romania");
             careersPage.choseLanguage("English");
-            Assert.AreEqual(26, careersPage.getVacancies().Count); 
+            Assert.AreEqual(25, careersPage.getVacancies().Count); 
         }
 
         [TearDown]
